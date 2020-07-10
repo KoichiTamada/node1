@@ -3,6 +3,7 @@ var ejs=require('ejs');
 var app=express();
 
 app.engine('ejs',ejs.renderFile);
+app.use(express.static('public'));
 
 app.get('/',(req,res)=>{
     res.render('index.ejs',
