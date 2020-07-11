@@ -7,7 +7,7 @@ app.use(express.static('public'));
 
 app.get('/',(req,res)=>{
     var msg='This is Express-app Top Page';
-    var url='/other?name=mon&pass=ktmpen8658';
+    var url='/other?name=mon&pass=onmon99882ktmpen8658';
     res.render('index.ejs',
     {
     title:'Index',
