@@ -1,3 +1,14 @@
 h1{
     font-size: 128pt;
+    font-weight: bold;
+    color: #e0e0e0;
+    text-align: center;
+}
+body{
+    font-size: 12pt;
+    color: #999;
+}
+p{
+    font-size: 14pt;
+    margin:0px 20px;
 }
