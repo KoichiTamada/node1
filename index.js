@@ -5,6 +5,9 @@ var app=express();
 app.engine('ejs',ejs.renderFile);
 app.use(express.static('public'));
 
+var bodyParser=require('body-parser');
+app.use(bodyParser.urlencoded({extended:false}));
+
 app.get('/',(req,res)=>{
     var msg='This is Express-app Top Page';
     var url='/other?name=mon&pass=onmon99882ktmpen8658';
@@ -42,6 +45,18 @@ app.get('/hello',(req,res)=>{
     link2:{href:'/other',text:'other'}
     });
 });
+
+app.post('/other',(req,res)=>{
+    var msg='これはPOSTで送られてきたページです。<br>'
+    + req.body.message +'と送られてきたのです！';
+    res.render('hello.ejs',
+    {
+        title:'POST IT!',
+        content:msg,
+        link1:{href:'/index',text:'INDEX'},
+        link2:{href:'/hello',text:'hello'}
+    })
+})
 
 app.listen(3000,()=>{
     console.log('Start server port:3000');

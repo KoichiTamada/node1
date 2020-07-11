@@ -9,6 +9,10 @@
     <body>
         <h1><%=title%></h1>
         <p><%-content%></p>
+        <form action='/other' method="post">
+            <p><input type="text" name="message"></p>
+            <p><input type="submit" value="send"></p>
+        </form>
         <p><a href="<%= link1.href %>"><%= link1.text %></a></p>
         <p><a href="<%= link2.href %>"><%= link2.text %></a></p>
     </body>
